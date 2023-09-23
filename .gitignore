@@ -1,0 +1,39 @@
+# executables
+/main
+
+# Mac
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# ENV
+.env
+*_rsa
+.secret*
+
+# Terraform
+*.tfstate*
+.terraform
+
+# Golang
+dist
+vendor
+coverage.out
+
+# Sonar
+.scannerwork
+/.local/
+
+# Air
+.air.toml
+/tmp/
+
+# Logs
+*.log
+logs*
+
+# data files
+*.json
+*.csv

@@ -91,15 +91,9 @@ func main() {
 	choices := responseMap["choices"].([]interface{})
 	message := choices[0].(map[string]interface{})["message"].(map[string]interface{})
 	contentReturned := message["content"].(string)
-
-	// Pretty-print the "content" field
-	prettyContent, err := json.MarshalIndent(contentReturned, "", "  ")
-	if err != nil {
-		fmt.Println("Error marshaling JSON:", err)
-		return
-	}
+	formattedResponse := strings.ReplaceAll(contentReturned, "\\n", "\n")
 
 	fmt.Println("\nContent Only in Pretty Format:")
-	fmt.Println(string(prettyContent))
-}
+	fmt.Println(formattedResponse)
 
+}
